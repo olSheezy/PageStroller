@@ -88,9 +88,14 @@ html{
 
 #themeToggleBtn {
   border: none;
-  position: absolute;
-  left: -5px;
-  top: 5px;
+}
+
+.theme-toggle-fixed {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+  background: none;
 }
 .tab-content {
   display: none;
