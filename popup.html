@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Stroller</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- <div class="header" >
+      
+      
+    </div> -->
+
+    <!-- Tab Navigation -->
+    <div class="tabs" style="position:relative;">
+      <button id="themeToggleBtn" class="btn-icon" title="Toggle dark/light mode">🌙</button>
+      <button id="popOutBtn" class="btn-icon" title="Pop out to new window">⧉</button>
+      <button class="tab-btn active" data-tab="urls">URLs</button>
+      <button class="tab-btn" data-tab="navigation">Navigation</button>
+    </div>
+
+    <!-- URLs Tab -->
+    <div id="urlsTab" class="tab-content active">
+       <div class="section">
+        <label for="itemList">URLs/Items (one per line):</label>
+        <textarea id="itemList" rows="3" placeholder="Enter items or URLs, one per line"></textarea>
+      </div>
+      <div class="section">
+        <label class="checkbox-container">
+          <input type="checkbox" id="useSlot">
+          <span>Use a slot to create URLs from the input (items)</span>
+        </label>
+        
+        <div id="baseUrlContainer" class="hidden">
+          <label for="baseUrl">Base URL (must contain {slot}):</label>
+          <input type="text" id="baseUrl" placeholder="https://example.com/{slot}/details">
+        </div>
+      </div>
+
+     
+      <button id="generateBtn" class="btn btn-primary">Generate Collection / Set Tab</button>
+      
+    </div>
+
+    <!-- Navigation Tab -->
+    <div id="navigationTab" class="tab-content">
+             <!-- Current URL -->
+      <div class="current-url">
+        <div id="currentUrl" class="url-display">No URL loaded</div>
+      </div>
+      <div class="nav-layout">
+        <!--  Vertical scrollable list (left) -->
+        <div class="url-list-container">
+          <div id="urlList" class="url-list"></div>
+        </div>
+   
+        <!-- Controls (right) -->
+        <div class="controls-container">
+            <div class="controls">
+            <button id="skipStartBtn" class="btn btn-skip" title="Skip to beginning">⏮</button>
+            <button id="prevBtn" class="btn">←</button>
+            <button id="playPauseBtn" class="btn btn-play">▶</button>
+            <button id="nextBtn" class="btn">→</button>
+            <button id="skipEndBtn" class="btn btn-skip" title="Skip to end">⏭</button>
+          </div>
+          <div class="section">
+            <div class="info-row">
+              <span><strong>Delay:</strong> <span id="delayValue">5</span>s</span>
+              <span><strong>URLs:</strong> <span id="currentIndex">0</span> / <span id="collectionCount">0</span></span>
+            </div>
+            <input type="range" id="delaySlider" min="5" max="60" value="5" step="1">
+          </div>
+        
+          <div class="help-notice">
+            Buttons not working? <a href="#" id="setTabLink">Reset</a>
+          </div>
+              <div id="status" class="status"></div>
+        </div>
+      </div>
+
+
+    </div>
+
+  
+
+
+
+    
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

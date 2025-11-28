@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "Page Stroller",
+  "author": "oLSheezy",
+  "version": "1.0.0",
+  "description": "Traverse a list of websites manually or automatically",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "commands": {
+    "navigate-previous": {
+      "suggested_key": {
+        "default": "Alt+Q"
+      },
+      "description": "Navigate to previous item"
+    },
+    "navigate-next": {
+      "suggested_key": {
+        "default": "Alt+W"
+      },
+      "description": "Navigate to next item"
+    },
+    "toggle-pause": {
+      "suggested_key": {
+        "default": "Alt+P"
+      },
+      "description": "Toggle play/pause auto-traverse"
+    }
+  }
+}
