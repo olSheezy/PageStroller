@@ -88,13 +88,15 @@ html{
 
 #themeToggleBtn {
   border: none;
+  font-size: 12px;
+
 }
 
 .theme-toggle-fixed {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 4px;
   z-index: 1000;
+  right:0px;
   background: none;
 }
 .tab-content {
