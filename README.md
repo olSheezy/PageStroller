@@ -20,7 +20,7 @@ A Chrome extension for traversing a list of URLs manually or automatically. Perf
 2. Open Chrome and go to `chrome://extensions/`
 3. Enable **Developer mode** (toggle in top-right)
 4. Click **Load unpacked** and select the project folder
-5. The Page Stroller icon will appear in your toolbar. Pin for conviencen. 
+5. The Page Stroller icon will appear in your toolbar. Pin for convenience. 
 
 ## Usage
 
@@ -69,7 +69,7 @@ Click the ⧉ button in the top-right corner to open the controls in a separate 
 
 ### Dark/Light Mode
 
-Click the 🌙 button in the top-left corner to switch to dark mode. Click ☀️ to switch back to light mode. Your preference is saved automatically.
+Click the 🌙 button in the bottom-right corner to switch to dark mode. Click ☀️ to switch back to light mode. Your preference is saved automatically.
 
 ## Keyboard Shortcuts
 
